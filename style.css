@@ -1,180 +1,371 @@
-/* 基本設定 */
+/* グローバルスタイル */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    font-family: 'Hiragino Kaku Gothic ProN', 'メイリオ', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: #1d1d1f;
+    background-color: #ffffff;
+    line-height: 1.5;
+    overflow-x: hidden;
 }
 
 .container {
-    width: 90%;
-    max-width: 1100px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 15px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* ヘッダー */
-header {
-    background-color: #5a9367;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    padding: 0 20px;
 }
 
 /* ナビゲーション */
 nav {
-    background-color: #3c6e4a;
-}
-
-nav ul {
+    background-color: rgba(251, 251, 253, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 48px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    list-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-nav li {
-    padding: 15px 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
-    background-color: #2a4f35;
-}
-
-/* メインコンテンツ */
-section {
-    padding: 60px 0;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #3c6e4a;
-    position: relative;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #5a9367;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* 農園について */
-.content-wrapper {
+.nav-container {
+    width: 100%;
+    max-width: 1024px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #1d1d1f;
+}
+
+.nav-links {
+    display: flex;
     gap: 30px;
 }
 
-.text-content, .image-content {
-    flex: 1;
-    min-width: 300px;
+.nav-links a {
+    text-decoration: none;
+    color: #1d1d1f;
+    font-size: 14px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
 }
 
-.text-content p {
-    margin-bottom: 20px;
+.nav-links a:hover {
+    opacity: 1;
 }
 
-/* 生産物 */
-.products-grid {
+/* ヒーローセクション */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 48px;
+    background: linear-gradient(to bottom, #f5f5f7, #ffffff);
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+}
+
+.hero h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #515154;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+/* 製品セクション */
+.products {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
 }
 
-.product-item {
-    background-color: white;
-    border-radius: 5px;
+.product-card {
+    background-color: #f5f5f7;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-item:hover {
-    transform: translateY(-5px);
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.product-item img {
+.product-img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.product-item h3, .product-item p {
-    padding: 10px 15px;
-}
-
-/* 季節の便り */
-.seasonal-item {
-    background-color: white;
+.product-info {
     padding: 20px;
-    border-radius: 5px;
+}
+
+.product-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #515154;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 18px;
+    color: #1d1d1f;
+}
+
+/* フィーチャーセクション */
+.features {
+    padding: 100px 0;
+    background-color: #f5f5f7;
+}
+
+.features-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.feature:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.feature-img {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.feature-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-title {
+    font-size: 32px;
+    font-weight: 700;
     margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.seasonal-item h3 {
-    color: #3c6e4a;
-    margin-bottom: 10px;
+.feature-desc {
+    font-size: 18px;
+    color: #515154;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-/* お問い合わせ */
-.contact-info {
-    background-color: white;
+.learn-more {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+.learn-more::after {
+    content: '>';
+    position: absolute;
+    right: -15px;
+    transition: transform 0.2s;
+}
+
+.learn-more:hover::after {
+    transform: translateX(5px);
+}
+
+/* テスティモニアルセクション */
+.testimonials {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.testimonial-card {
     padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #f5f5f7;
+    border-radius: 20px;
+    text-align: left;
 }
 
-.contact-info p {
-    margin-bottom: 10px;
+.quote {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.author {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* フッター */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    background-color: #f5f5f7;
+    padding: 60px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* レスポンシブ対応 */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer-col h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #515154;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #1d1d1f;
+}
+
+.copyright {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 12px;
+    color: #86868b;
+}
+
+/* レスポンシブスタイル */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+    .hero h1 {
+        font-size: 36px;
     }
-    
-    .content-wrapper {
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .feature {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .feature:nth-child(even) {
         flex-direction: column;
     }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate {
+    animation: fadeIn 1s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
 }
