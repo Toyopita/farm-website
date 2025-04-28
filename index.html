@@ -3,89 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>〇〇農園 - 新鮮な農産物をお届けします</title>
+    <title>サンプル企業 - リンゴの故郷から革新を</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>〇〇農園</h1>
-            <p>自然の恵みを大切に、心を込めて育てています</p>
-        </div>
-    </header>
-
+    <!-- ナビゲーションバー -->
     <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#about">農園について</a></li>
-                <li><a href="#products">生産物</a></li>
-                <li><a href="#seasonal">季節の便り</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
-            </ul>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#">サンプル企業</a>
+            </div>
+            <div class="nav-links">
+                <a href="#products">商品</a>
+                <a href="#features">特徴</a>
+                <a href="#testimonials">お客様の声</a>
+                <a href="#contact">お問い合わせ</a>
+            </div>
         </div>
     </nav>
 
-    <main>
-        <section id="about" class="container">
-            <h2>農園について</h2>
-            <div class="content-wrapper">
-                <div class="text-content">
-                    <p>〇〇県〇〇市で代々続く農家です。自然と共に生き、環境に優しい農法で野菜や果物を栽培しています。</p>
-                    <p>私たちは化学肥料や農薬の使用を最小限に抑え、土壌の健康を大切にした持続可能な農業を実践しています。</p>
-                </div>
-                <div class="image-content">
-                    <img src="images/farm.jpg" alt="農園の様子">
-                </div>
-            </div>
-        </section>
-
-        <section id="products" class="container">
-            <h2>主な生産物</h2>
-            <div class="products-grid">
-                <div class="product-item">
-                    <img src="images/product1.jpg" alt="野菜1">
-                    <h3>野菜1</h3>
-                    <p>収穫時期: 〇月〜〇月</p>
-                </div>
-                <div class="product-item">
-                    <img src="images/product2.jpg" alt="野菜2">
-                    <h3>野菜2</h3>
-                    <p>収穫時期: 〇月〜〇月</p>
-                </div>
-                <div class="product-item">
-                    <img src="images/product3.jpg" alt="果物1">
-                    <h3>果物1</h3>
-                    <p>収穫時期: 〇月〜〇月</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="seasonal" class="container">
-            <h2>季節の便り</h2>
-            <div class="seasonal-content">
-                <div class="seasonal-item">
-                    <h3>2025年4月</h3>
-                    <p>春の訪れとともに、苗の植え付けが始まりました。今年も豊作になるよう願っています。</p>
-                </div>
-                <!-- 季節の便りは適宜追加・更新できます -->
-            </div>
-        </section>
-
-        <section id="contact" class="container">
-            <h2>お問い合わせ</h2>
-            <div class="contact-info">
-                <p>住所: 〇〇県〇〇市〇〇町123</p>
-                <p>電話: 000-000-0000</p>
-                <p>メール: info@example.com</p>
-                <p>営業時間: 午前9時〜午後5時 (土日祝定休)</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <!-- ヒーローセクション -->
+    <section class="hero">
         <div class="container">
-            <p>&copy; 2025 〇〇農園 All Rights Reserved.</p>
+            <h1 class="animate">長野産。最高品質。</h1>
+            <h2 class="animate delay-1">信州の大自然が育んだ、最高級のリンゴをお届けします。</h2>
+            <img src="/api/placeholder/1200/600" alt="長野りんご" class="hero-img animate delay-2">
+        </div>
+    </section>
+
+    <!-- 製品セクション -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">厳選された品種</h2>
+            <div class="product-grid">
+                <div class="product-card animate">
+                    <img src="/api/placeholder/400/300" alt="ふじりんご" class="product-img">
+                    <div class="product-info">
+                        <h3>ふじ</h3>
+                        <p>甘みと酸味のバランスが絶妙な、日本を代表するリンゴ品種です。</p>
+                        <div class="price">¥3,800 / 5kg</div>
+                    </div>
+                </div>
+                <div class="product-card animate delay-1">
+                    <img src="/api/placeholder/400/300" alt="シナノゴールド" class="product-img">
+                    <div class="product-info">
+                        <h3>シナノゴールド</h3>
+                        <p>長野県生まれの黄色い品種。芳醇な香りとジューシーな食感が特徴です。</p>
+                        <div class="price">¥4,200 / 5kg</div>
+                    </div>
+                </div>
+                <div class="product-card animate delay-2">
+                    <img src="/api/placeholder/400/300" alt="秋映" class="product-img">
+                    <div class="product-info">
+                        <h3>秋映</h3>
+                        <p>鮮やかな赤色と濃厚な甘さが魅力。長野県オリジナル品種です。</p>
+                        <div class="price">¥4,500 / 5kg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フィーチャーセクション -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">なぜ長野のリンゴなのか</h2>
+            <div class="features-container">
+                <div class="feature animate">
+                    <div class="feature-img">
+                        <img src="/api/placeholder/600/400" alt="長野の気候">
+                    </div>
+                    <div class="feature-text">
+                        <h3 class="feature-title">最適な気候条件</h3>
+                        <p class="feature-desc">昼夜の寒暖差が大きい長野の気候は、リンゴの甘みと香りを引き出します。標高500m以上の高地で栽培されるリンゴは、日照時間が長く、みずみずしさと風味が格別です。</p>
+                        <a href="#" class="learn-more">詳しく見る</a>
+                    </div>
+                </div>
+                <div class="feature animate">
+                    <div class="feature-img">
+                        <img src="/api/placeholder/600/400" alt="有機栽培">
+                    </div>
+                    <div class="feature-text">
+                        <h3 class="feature-title">持続可能な農法</h3>
+                        <p class="feature-desc">私たちは環境に配慮した農法を実践しています。化学肥料や農薬の使用を最小限に抑え、自然と共生する栽培方法で、安全で美味しいリンゴを生産しています。</p>
+                        <a href="#" class="learn-more">詳しく見る</a>
+                    </div>
+                </div>
+                <div class="feature animate">
+                    <div class="feature-img">
+                        <img src="/api/placeholder/600/400" alt="熟練の技術">
+                    </div>
+                    <div class="feature-text">
+                        <h3 class="feature-title">代々受け継がれる技術</h3>
+                        <p class="feature-desc">長野のリンゴ農家は何世代にもわたって培われた技術と知識を持っています。手間を惜しまない丁寧な剪定と間引きにより、一つ一つのリンゴに十分な栄養が行き渡るようにしています。</p>
+                        <a href="#" class="learn-more">詳しく見る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- テスティモニアルセクション -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">お客様の声</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card animate">
+                    <p class="quote">「長野のリンゴは他と比べ物になりません。一口噛むと果汁が溢れ出し、その甘さと香りに感動します。毎年注文するのが楽しみです。」</p>
+                    <div class="author">
+                        <img src="/api/placeholder/40/40" alt="お客様" class="author-img">
+                        <span>鈴木 健太 様</span>
+                    </div>
+                </div>
+                <div class="testimonial-card animate delay-1">
+                    <p class="quote">「贈り物として送ったところ、とても喜ばれました。見た目の美しさと味の良さで、特別な日の贈り物に最適です。」</p>
+                    <div class="author">
+                        <img src="/api/placeholder/40/40" alt="お客様" class="author-img">
+                        <span>佐藤 美咲 様</span>
+                    </div>
+                </div>
+                <div class="testimonial-card animate delay-2">
+                    <p class="quote">「子供たちが毎日食べても飽きないと言っています。安全な食べ物を提供してくれる農家さんに感謝しています。」</p>
+                    <div class="author">
+                        <img src="/api/placeholder/40/40" alt="お客様" class="author-img">
+                        <span>田中 裕子 様</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>商品情報</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">品種一覧</a></li>
+                        <li><a href="#">ギフトセット</a></li>
+                        <li><a href="#">季節限定商品</a></li>
+                        <li><a href="#">価格表</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>会社情報</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">私たちについて</a></li>
+                        <li><a href="#">栽培方法</a></li>
+                        <li><a href="#">農園見学</a></li>
+                        <li><a href="#">採用情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>サポート</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">よくある質問</a></li>
+                        <li><a href="#">配送について</a></li>
+                        <li><a href="#">返品・交換</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>お問い合わせ</h4>
+                    <ul class="footer-links">
+                        <li>〒000-0000</li>
+                        <li>○○県○○市○○町1-1</li>
+                        <li>TEL: 00-0000-0000</li>
+                        <li>Email: info@example.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 サンプル企業 All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // シンプルなスクロールアニメーション
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>
